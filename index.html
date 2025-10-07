@@ -27,7 +27,7 @@
         function openGamesLinks()
         {
             window.ysdk.features.GamesAPI.getAllGames()
-                .then(games => window.open(games.developerURL, '_blank').focus())
+                .then(games => {console.log(document.referrer); window.open(games.developerURL, '_blank').focus()})
         }
     </script>
     <script>
